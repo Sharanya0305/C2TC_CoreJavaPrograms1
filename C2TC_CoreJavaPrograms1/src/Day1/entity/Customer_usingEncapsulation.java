@@ -1,16 +1,10 @@
 package Day1.entity;
 
 public class Customer_usingEncapsulation {
-	package Day1.entity;
-
-	public class Customer {
 		private int cid;
 		private String cname;
-		@Override
-		public String toString() {
-			return "Customer [cid=" + cid + ", cname=" + cname + ", city=" + city + "]";
-		}
 		private String city;
+	
 		public int getCid() {
 			return cid;
 		}
@@ -28,9 +22,11 @@ public class Customer_usingEncapsulation {
 		}
 		public void setCity(String city) {
 			this.city = city;
+		}	
+		@Override
+		public String toString() {
+			return "Customer [cid=" + cid + ", cname=" + cname + ", city=" + city + "]";
 		}
-		
 	}
 
-
-}
+// Right click and press 'Source'. Use Generate getters
