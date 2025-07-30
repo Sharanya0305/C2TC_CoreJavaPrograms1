@@ -1,14 +1,34 @@
 package Assignment5;
 
-public class Executor{
-	public static void main(String[] args) {
-    AirIndia ai = new AirIndia(3, 1500.0);
-    ai.display();
+import java.util.Scanner;
 
-    Indigo indigo = new Indigo(2, 2000.0);
-    indigo.display();
+public class Executor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-    KingFisher kf = new KingFisher(4, 1200.0);
-    kf.display(); // ✅ This will now work correctly
-}
+        int choice = sc.nextInt();
+        int hours = sc.nextInt();
+        double costPerHour = sc.nextDouble();
+
+        Airfare airline;
+
+        switch (choice) {
+            case 1:
+                airline = new AirIndia(hours, costPerHour);
+                break;
+            case 2:
+                airline = new KingFisher(hours, costPerHour);
+                break;
+            case 3:
+                airline = new Indigo(hours, costPerHour);
+                break;
+            default:
+                System.out.println("Invalid choice");
+                sc.close();
+                return;
+        }
+
+        airline.display(); // Prints total amount with 2 decimal places
+        sc.close();
+    }
 }

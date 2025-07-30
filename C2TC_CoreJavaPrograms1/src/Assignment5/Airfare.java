@@ -1,6 +1,5 @@
 package Assignment5;
-
-public interface Airfare {
+interface Airfare {
     double calculateAmount();
     void display();
 }
