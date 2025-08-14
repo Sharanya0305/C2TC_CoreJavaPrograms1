@@ -1,4 +1,4 @@
-package Assignment5;
+package Assignment4;
 
 class KingFisher implements Airfare {
     private int hours;

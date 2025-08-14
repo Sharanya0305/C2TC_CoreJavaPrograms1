@@ -9,5 +9,3 @@ public class Addition {
 		System.out.println("Addition of a="+a+" and b="+b+" is "+c);
 	}
 	}
-
-

@@ -1,4 +1,4 @@
-package Assignment6;
+package Assignment5;
 
 public class TicketBooking {
     private String stageEvent;
